@@ -1,0 +1,133 @@
+@font-face {
+  /* https://www.1001fonts.com/digital-7-font.html */
+  font-family: Digital;
+  src: url('../assets/fonts/digital-7.ttf');
+  font-weight: normal;
+}
+
+
+:root {
+  --clr-border:#685A5B;
+  --clr-display-frame:#080808;
+  --clr-display: 69, 89, 77;
+  --clr-keyboard:#EBEBE9;
+  --clr-key:#3A2D2D;
+  --clr-clear: #FC7024;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 48px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: .85rem;
+  /* line-height: 3rem; */
+  color: #EBEBE9;
+  background-color: #EAEAE8;
+  /* background-image: url(../bg.jpg); */
+  /* background-position: center center; */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  position: relative;
+}
+
+.calculator {
+  width: 450px;
+  height: 610px;
+  border-radius: 40px;
+  border: solid 10px var(--clr-border);
+  margin-left: auto;
+  margin-right: auto;
+  /* background-image: url(../calculadora.jpg); */
+  /* background-position: -225px -150px; */
+  overflow: hidden;
+}
+
+.calculator__display {
+  height: 220px;
+  background-color: var(--clr-display-frame);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  line-height: 1.5;
+  font-family: Digital;
+  font-size: 1.4rem;
+  font-weight: normal;
+  /* color: var(--clr-display-frame); */
+}
+
+.trademark {
+  font-size: .45rem;
+  /* background-color: red; */
+  width: 80%;
+  text-align: center;
+  color: var(--clr-display);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.display {
+  width: 90%;
+  /* max-width: 344px; */
+  height: 120px;
+  background-color: rgba(var(--clr-display),.3);
+  border-radius: 10px;
+  text-align: right;
+  padding: .5rem;
+  overflow: hidden;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.calculator__keyboard {
+    /* width: 80%; */
+    background-color: var(--clr-keyboard);
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    column-gap: 30px;
+    row-gap: 10px;
+    /* height: 100vh; */
+    font-size: .5rem;
+    font-weight: normal;
+    padding: 50px 25px;
+}
+
+.key {
+  width: 65px;
+  height: 50px;
+  background-color: var(--clr-key);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.key-clear {
+  background-color: var(--clr-clear);
+}
+
+.key-number {
+  background-color: #080808;
+}
+
+/* .key-delete {
+  background-color: var(--clr-keyboard);
+  color: var(--clr-display-frame);
+  border: solid 2px red;
+} */
+
+.key:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px inherit;
+}
